@@ -115,15 +115,15 @@ if __name__ == "__main__":
         print('[%s] = ' % arg,  getattr(args, arg))
 
 
-    os.system('mkdir ' + args.root + '/A ' + args.root + '/B')
+    os.system('mkdir ./A ./B')
 
-    fold_A = os.path.join(args.root, 'A')
+    fold_A = os.path.join('./', 'A')
     os.system('mkdir ' + os.path.join(fold_A, 'train') + ' ' + os.path.join(fold_A, 'test') + ' ' + os.path.join(fold_A, 'val'))
 
-    fold_B = os.path.join(args.root, 'B')
+    fold_B = os.path.join('./', 'B')
     os.system('mkdir ' + os.path.join(fold_B, 'train') + ' ' + os.path.join(fold_B, 'test') + ' ' + os.path.join(fold_B, 'val'))
 
-    fold_AB = os.path.join(args.root, args.output_dir)
+    fold_AB = os.path.join('./', args.output_dir)
     use_AB = False
 
     A = Dataset()
