@@ -40,5 +40,6 @@ For Geometric Reconstruction:
 cd ufc/src;
 python demo.py --rgb_img <path/to/rgb/image> --depth_img <path/to/depth/image> --correspondence_img <path/to/correspondence/image> --output_name output
 ```
-
+We have not provided the correspondence map estimation code as our model doesn't produce the expected results.
+For now you can either use the synthetic ones or use the authors implementation available here: https://github.com/eladrich/pix2vertex.pytorch
 
