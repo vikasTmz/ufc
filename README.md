@@ -23,11 +23,14 @@ For Depth Estimation
 ```
 git clone https://github.com/vikasTmz/ufc.git;
 git clone https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix.git;
+
 unzip rgb2depth_dataset;
 mv rgb2depth_dataset pytorch-CycleGAN-and-pix2pix/datasets;
+
 mv depth_generator_network.pth latest_net_G.pth;
 mkdir pytorch-CycleGAN-and-pix2pix/checkpoints/rgb2depth_pix2pix;
 mv latest_net_G.pth pytorch-CycleGAN-and-pix2pix/checkpoints/rgb2depth_pix2pix;
+
 cd pytorch-CycleGAN-and-pix2pix;
 python test.py --dataroot ./datasets/rgb2depth_dataset --name rgb2depth_pix2pix --model pix2pix --direction AtoB;
 ```
