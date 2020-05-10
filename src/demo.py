@@ -1,6 +1,5 @@
 import matlab.engine
 import os
-import cv2
 import argparse
 import sys
 
@@ -11,8 +10,8 @@ if __name__ == "__main__":
  	# Parse CLI arguments
     # When --help or no args are given, print this help
     usage_text = (
-        ":"
-        " " + __file__ + " "
+        ""
+        "python demo.py --rgb_img <path/to/rgb/image> --depth_img <path/to/depth/image> --correspondence_img <path/to/correspondence/image> --output_name output"
     )
 
     parser = argparse.ArgumentParser(description=usage_text)
